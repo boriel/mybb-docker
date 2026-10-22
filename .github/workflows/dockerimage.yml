@@ -45,7 +45,7 @@ jobs:
             --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') \
             --build-arg BUILD_SHA512SUM=$BUILD_SHA512SUM \
             --build-arg BUILD_VERSION=$BUILD_VERSION \
-            --tag ghcr.io/mybb/mybb:$BUILD_VERSION \
-            --tag ghcr.io/mybb/mybb:latest \
+            --tag ghcr.io/${{ github.actor }}/mybb:$BUILD_VERSION \
+            --tag ghcr.io/${{ github.actor }}/mybb:latest \
             --push \
           $PWD
